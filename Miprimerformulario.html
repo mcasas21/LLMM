@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer Formulario</title>
+    <link rel="icon" href="/favicon/elefante.ico" type="image/ico">
+    <style>
+        .borde {
+            border: 2px solid rebeccapurple;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="border: 2px solid red; border-spacing: 10px ;">
+        <form action="manejador.html" method="post" enctype="multipart/form-data" name="form1"                     autocomplete="on">
+        <tr>
+            <td style="border: 2px solid green">
+                
+
+                    <label for="usuario" form="form1">USUARIO:</label>
+                    <input type="text" name="usuario"><br>
+                    <label for="password" form="form1">CONTRASEÑA:</label>
+                    <input type="password" name="password"><br>
+                    <label for="socio" form="form1">SOCIO:</label>
+                    <input type="checkbox" name="socio" checked><br>
+
+
+                    <label for="sexo" form="form1">SEXO:</label>
+                    <input type="radio" name="sexo" value="m" checked>Masculino
+                    <input type="radio" name="sexo" value="f">Femenino
+
+            
+            </td>
+            <td style="border: 2px solid yellow;">
+                <input type="checkbox" name="aventuras" id="aventuras">Acción<br>
+                <input type="checkbox" name="historia" id="historia">Historia<br>
+                <input type="checkbox" name="ficcion" id="ficcion">Ficción<br>
+                <input type="checkbox" name="terror" id="terror">Terror<br>
+                <input type="color" name="color" id="color" value="#808080">Color<br>
+                Edad:</Edad:pre><input type="range" name="rango" id="rango" min="18" max="100" step="5" value="50">
+              
+            </td>
+        </tr>
+        <tr>
+            
+            
+        </tr>
+        <tr>
+            
+            <td class="borde">
+                Descuento: <input name="descuento" value="15%" id="descuento" size="2" readonly><br>
+                Elige Fichero:<input type="file" name="fichero" id="fichero" accept="image/png"><br>
+                Fecha:<input type="date" name="fecha" value="2024-11-22">
+                
+            </td>
+        </tr>
+    </form>
+    </table>
+</body>
+
+</html>
