@@ -15,14 +15,14 @@
 
 <body>
     <table style="border: 2px solid red; border-spacing: 10px ;">
-        <form action="manejador.html" method="post" enctype="multipart/form-data" name="form1"                     autocomplete="on">
-        <tr>
-            <td style="border: 2px solid green">
-                
+        <form action="./manejador.html" method="post" enctype="multipart/form-data" name="form1" autocomplete="on">
+            <tr>
+                <td style="border: 2px solid green">
+
 
                     <label for="usuario" form="form1">USUARIO:</label>
                     <input type="text" name="usuario"><br>
-                    <label for="password" form="form1">CONTRASEÑA:</label>
+                    <label for="password" form="form1" pattern="[A-Za-z]{3}">CONTRASEÑA:</label>
                     <input type="password" name="password"><br>
                     <label for="socio" form="form1">SOCIO:</label>
                     <input type="checkbox" name="socio" checked><br>
@@ -32,32 +32,88 @@
                     <input type="radio" name="sexo" value="m" checked>Masculino
                     <input type="radio" name="sexo" value="f">Femenino
 
-            
-            </td>
-            <td style="border: 2px solid yellow;">
-                <input type="checkbox" name="aventuras" id="aventuras">Acción<br>
-                <input type="checkbox" name="historia" id="historia">Historia<br>
-                <input type="checkbox" name="ficcion" id="ficcion">Ficción<br>
-                <input type="checkbox" name="terror" id="terror">Terror<br>
-                <input type="color" name="color" id="color" value="#808080">Color<br>
-                Edad:</Edad:pre><input type="range" name="rango" id="rango" min="18" max="100" step="5" value="50">
-              
-            </td>
-        </tr>
-        <tr>
-            
-            
-        </tr>
-        <tr>
-            
-            <td class="borde">
-                Descuento: <input name="descuento" value="15%" id="descuento" size="2" readonly><br>
-                Elige Fichero:<input type="file" name="fichero" id="fichero" accept="image/png"><br>
-                Fecha:<input type="date" name="fecha" value="2024-11-22">
+
+                </td>
+                <td style="border: 2px solid yellow;">
+                    <input type="checkbox" name="aventuras" id="aventuras">Acción<br>
+                    <input type="checkbox" name="historia" id="historia">Historia<br>
+                    <input type="checkbox" name="ficcion" id="ficcion">Ficción<br>
+                    <input type="checkbox" name="terror" id="terror">Terror<br>
+                    <input type="color" name="color" id="color" value="#808080">Color<br>
+                    Edad:</Edad:pre><input type="range" name="rango" id="rango" min="18" max="100" step="5" value="50">
+
+                </td>
+            </tr>
+            <tr>
+
+
+            </tr>
+            <tr>
+
+                <td class="borde">
+                    Descuento: <input name="descuento" value="15%" id="descuento" size="2" readonly><br>
+                    Elige Fichero:<input type="file" name="fichero" id="fichero" accept="image/png"><br>
+                    Fecha:<input type="date" name="fecha" value="2024-11-22">
+                    Hora:<input type="time" name="hora" value="10:00">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Comentario</legend>
                 
-            </td>
-        </tr>
-    </form>
+                    <textarea name="texto" id="cuadro" cols="50" rows="1" maxlength="3"
+                        placeholder="Introduce comentario"></textarea>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Vehículos</legend>
+                    
+                    <select name="coches" id="coches">
+                        <optgroup label="Turismos">
+                            <option value="1">Volvo</option>
+                            <option value="2">Toyota</option>
+                            <option value="3">Smart</option>
+                            <option value="4">Maseratti</option>
+                        </optgroup>
+                        <optgroup label="Camiones">
+                            <option value="5">Iveco Destroyer</option>
+                            <option value="6">Pegaso</option>
+                            <option value="7">Barreiro</option>
+                        </optgroup>
+
+
+
+                    </select>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Otro tipo de lista</legend>
+                        <label for="datos">Teléfonos institutos:</label>
+                        <input type="tel" name="telefono" list="datos">
+                        <datalist id="datos" name="datos">
+                            <option value="927531401" label="IES Augustobriga"></option>
+                            <option value="927531616" label="IES Zurbarán"></option>
+                            <option value="927535252" label="IES Albalat"></option>
+                        </datalist>
+
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Enviar">
+                </td>
+                <td>
+                    <button type="reset"><img src="./borrar.png" alt="" width="32" height="32"></button>
+                </td>
+            </tr>
+        </form>
     </table>
 </body>
 
